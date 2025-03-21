@@ -2,29 +2,29 @@
 doctype html
 html(lang = 'en')
 
-  block vars
+  //- block vars
 
   include ../partials/head.pug
 
   body.bg-light
 
-    include ../partials/navbar.pug
+    //- include ../partials/navbar.pug
 
-    include ../partials/authors.pug
-    header.container
+    //- include ../partials/authors.pug
+    header.container.pt-3
       block canvas
 
-    section.container.mt-4
-      div.row
-        div.col
-          h2 #{demo.title.toUpperCase()}&ensp;|&ensp;Source Code Breakdown
-          p.lead Demo using #[a(href = 'https://github.com/cginternals/webgl-operate') webgl-operate] by&nbsp;
-            +authors(demo.authors)
-            |#{'.'}
-          hr
+    //- section.container.mt-4
+    //-   div.row
+    //-     div.col
+    //-       h2 #{demo.title.toUpperCase()}&ensp;|&ensp;Source Code Breakdown
+    //-       p.lead Demo using #[a(href = 'https://github.com/cginternals/webgl-operate') webgl-operate] by&nbsp;
+    //-         +authors(demo.authors)
+    //-         |#{'.'}
+    //-       hr
 
-          block breakdown
-            p.text-muted Breakdown coming soon.
+    //-       block breakdown
+    //-         p.text-muted Breakdown coming soon.
 
     script(src = '/js/rxjs.umd.min.js')
     script(src = '/js/webgl-operate.js')
@@ -36,4 +36,4 @@ html(lang = 'en')
 
     block onload
 
-    include ../partials/foot.pug
+    //- include ../partials/foot.pug

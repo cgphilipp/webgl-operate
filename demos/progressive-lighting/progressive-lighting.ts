@@ -49,7 +49,7 @@ import { DiffuseEnvironmentSample, LightSample, SampleManager, SpecularEnvironme
  */
 export class ProgressiveLightingRenderer extends Renderer {
 
-    static URL = 'https://p-otto.waduhek.de';
+    static URL = '/demos/data';
 
     protected _loader: GLTFLoader;
 
@@ -1018,12 +1018,12 @@ export class ProgressiveLightingRenderer extends Renderer {
         this._diffuseEnvironment.initialize(64, internalFormatAndType[0], gl.RGBA, internalFormatAndType[1]);
 
         this._diffuseEnvironment.fetch({
-            positiveX: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-px-diffuse.png`,
-            negativeX: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-nx-diffuse.png`,
-            positiveY: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-py-diffuse.png`,
-            negativeY: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-ny-diffuse.png`,
-            positiveZ: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-pz-diffuse.png`,
-            negativeZ: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-nz-diffuse.png`,
+            positiveX: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-px-diffuse.png`,
+            negativeX: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-nx-diffuse.png`,
+            positiveY: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-py-diffuse.png`,
+            negativeY: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-ny-diffuse.png`,
+            positiveZ: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-pz-diffuse.png`,
+            negativeZ: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-nz-diffuse.png`,
         });
 
         this._specularEnvironment = new TextureCube(this._context, 'SpecularEnvironment');
@@ -1036,12 +1036,12 @@ export class ProgressiveLightingRenderer extends Renderer {
 
         for (let mipLevel = 0; mipLevel < MIPMAP_LEVELS; ++mipLevel) {
             this._specularEnvironment.fetch({
-                positiveX: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-px-${mipLevel}.png`,
-                negativeX: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-nx-${mipLevel}.png`,
-                positiveY: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-py-${mipLevel}.png`,
-                negativeY: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-ny-${mipLevel}.png`,
-                positiveZ: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-pz-${mipLevel}.png`,
-                negativeZ: `${ProgressiveLightingRenderer.URL}/${environmentName}/preprocessed-map-nz-${mipLevel}.png`,
+                positiveX: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-px-${mipLevel}.png`,
+                negativeX: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-nx-${mipLevel}.png`,
+                positiveY: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-py-${mipLevel}.png`,
+                negativeY: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-ny-${mipLevel}.png`,
+                positiveZ: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-pz-${mipLevel}.png`,
+                negativeZ: `${ProgressiveLightingRenderer.URL}/environments/${environmentName}/preprocessed-map-nz-${mipLevel}.png`,
             }, mipLevel);
         }
     }

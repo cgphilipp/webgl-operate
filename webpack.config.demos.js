@@ -6,12 +6,12 @@ module.exports = {
     context: __dirname + '/demos',
     cache: false,
     entry: {
-        'cornell-box': ['cornell-box/cornellbox.ts'],
-        'cubescape': ['cubescape/cubescape.ts'],
-        'gltf-renderer': ['gltf-renderer/gltfrenderer.ts'],
+        // 'cornell-box': ['cornell-box/cornellbox.ts'],
+        // 'cubescape': ['cubescape/cubescape.ts'],
+        // 'gltf-renderer': ['gltf-renderer/gltfrenderer.ts'],
         'progressive-lighting': ['progressive-lighting/progressive-lighting.ts'],
-        'eye-tracking': ['eye-tracking/eyetracking.ts'],
-        'point-cloud': ['point-cloud/point-cloud.ts']
+        // 'eye-tracking': ['eye-tracking/eyetracking.ts'],
+        // 'point-cloud': ['point-cloud/point-cloud.ts']
     },
     devtool: 'source-map',
     output: {
